@@ -1,0 +1,1578 @@
+
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Gavar Realty -  Անշարժ Գույք</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://scontent.fevn2-1.fna.fbcdn.net/v/t39.30808-6/651835886_122096636924984677_6573394965550721460_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=KNL_ZRF2vU4Q7kNvwFLsygV&_nc_oc=AdoAmqtbPbJPLiO6wPA04ojBkrAH9fUFGfCO9u6h_WWN331c5XWs9UWoyvc3E94fNDo&_nc_zt=23&_nc_ht=scontent.fevn2-1.fna&_nc_gid=XfdZyMdGlZVyIeX5tpORag&_nc_ss=7f2a8&oh=00_Af4IIm7XKtRmhQDtVCUlaeQlrOnF7XHxmlFUNZfYmPmkfw&oe=6A01426A">
+    <link href="your node font awesome location" rel="stylesheet" type="text/css">
+    <link rel="apple-touch-icon" href="https://scontent.fevn2-1.fna.fbcdn.net/v/t39.30808-6/651835886_122096636924984677_6573394965550721460_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=KNL_ZRF2vU4Q7kNvwFLsygV&_nc_oc=AdoAmqtbPbJPLiO6wPA04ojBkrAH9fUFGfCO9u6h_WWN331c5XWs9UWoyvc3E94fNDo&_nc_zt=23&_nc_ht=scontent.fevn2-1.fna&_nc_gid=XfdZyMdGlZVyIeX5tpORag&_nc_ss=7f2a8&oh=00_Af4IIm7XKtRmhQDtVCUlaeQlrOnF7XHxmlFUNZfYmPmkfw&oe=6A01426A">
+    <meta property="og:title" content="Gavar Realty - Անշարժ գույք Գավառում">
+    <meta property="og:description" content="Գնեք կամ վարձակալեք լավագույն տները և բնակարանները Գավառում:">
+    <meta property="og:image" content="your-main-banner.jpg"> 
+    <meta property="og:url" content="https://gavarrealty.com">
+    <style>
+        :root {
+            --primary: #0d1b2a;
+            --accent: #c5a073;
+            --white: #ffffff;
+            --light: #f4f4f4;
+            --transition: all 0.3s ease;
+            scroll-behavior: smooth;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: var(--light); color: #333; }
+
+        /* Navigation */
+        :root {
+            --primary: #0d1b2a;
+            --accent: #c5a073;
+            --white: #ffffff;
+            --text-dark: #1a1a1a;
+            scroll-behavior: smooth;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; }
+
+        header {
+            scroll-behavior: smooth;
+            background: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0; z-index: 1000;
+        }
+
+        .logo-section { display: flex; align-items: center; gap: 10px; }
+        .logo-img { height: 75px; }  
+        .logo-text { line-height: 1; }
+        .logo-text h1 { font-size: 18px; color: var(--primary); letter-spacing: 2px; font-weight: 700; }
+        .logo-text p { font-size: 10px; color: var(--primary); letter-spacing: 4px; text-transform: uppercase; }
+
+        nav ul { display: flex; list-style: none; gap: 45px; }
+        nav a { text-decoration: none; color: var(--text-dark); font-size: 17px; font-weight: 600; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+
+        .btn-contact-top {
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn-contact-top:hover { background: var(--accent); }
+
+        .hero {
+            height: 85vh;
+            background: linear-gradient(to right, rgba(13,27,42,0.85) 30%, rgba(13,27,42,0.2)), 
+                        url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            color: white;
+        }
+
+        .hero-content { max-width: 2000px; }
+        .hero-content h2 { font-size: 65px; font-weight: 700; margin-bottom: 10px; }
+        .hero-content p.subtitle { font-size: 22px; opacity: 0.9; margin-bottom: 40px; font-weight: 400; }
+
+        .hero-features {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            margin-bottom: 45px;
+        }
+
+        .feature-item { display: flex; align-items: center; gap: 15px; }
+        .feature-item i { color: var(--accent); font-size: 24px; width: 30px; text-align: center; }
+        .feature-item span { font-size: 14px; line-height: 1.4; font-weight: 500; }
+
+        .btn-main {
+            background: var(--accent);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            display: inline-block;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(197, 160, 115, 0.3);
+        }
+        .btn-main:hover { transform: translateY(-3px); background: #b08e60; }
+
+        /* Mobile Optimization */
+        @media (max-width: 992px) {
+            header nav { display: none; }
+            .hero-content h2 { font-size: 40px; }
+            .hero-features { grid-template-columns: 1fr; }
+        }
+        .callback-section {
+    background-color: #f8f9fa; /* Բաց մոխրագույն ֆոն, որ առանձնանա */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.callback-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.callback-section h3 {
+    font-size: 28px;
+    color: #0d1b2a; /* Քո մուգ կապույտ գույնը */
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.callback-section p {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* Ֆորմայի դասավորությունը */
+.callback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.callback-form input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px; /* 16px, որ հեռախոսով չմոտիկանա (zoom չլինի) */
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.callback-form input:focus {
+    border-color: #0d1b2a; /* Սեղմելիս դառնում է մուգ կապույտ */
+}
+
+/* Կոճակը */
+.submit-btn {
+    background-color: #0d1b2a;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #1b2e44;
+}
+
+/* Հեռախոսների համար */
+@media (max-width: 768px) {
+    .callback-section h3 {
+        font-size: 22px;
+    }
+}
+        .search-panel {
+            max-width: 1100px;
+            margin: -50px auto 50px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            position: relative; z-index: 10;
+        }
+.input-group select {
+    appearance: none; 
+    background-color: #ffffff;
+    border: 2px solid #e0e6ed;
+    border-radius: 12px;
+    padding: 12px 40px 12px 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #2d3436;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23c5a073' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.input-group select:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(197, 160, 115, 0.1);
+}
+
+.input-group select:focus {
+    border-color: var(--accent);
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(197, 160, 115, 0.1);
+}
+
+ 
+.input-group select option {
+    padding: 15px;
+    background-color: #ffffff;
+    color: #2d3436;
+    font-size: 14px;
+}
+
+body {
+    touch-action: pan-x pan-y; 
+}
+@media (max-width: 768px) {
+    .input-group select {
+        padding: 14px 16px;
+        font-size: 16px;  
+    }
+}
+        
+        .input-group { flex: 1; min-width: 150px; }
+        .input-group label { display: block; font-size: 11px; font-weight: 700; color: #888; margin-bottom: 8px; text-transform: uppercase; }
+        .input-group select { width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 5px; background: #fafafa; outline: none; }
+        .btn-search { background: var(--primary); color: white; border: none; padding: 0 35px; border-radius: 5px; font-weight: 600; cursor: pointer; height: 45px; align-self: flex-end; transition: var(--transition); }
+        .btn-search:hover { background: var(--accent); }
+
+        /* Catalog Grid */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px 80px; }
+        .title-section { text-align: center; margin-bottom: 40px; }
+        .underline { width: 50px; height: 3px; background: var(--accent); margin: 10px auto; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .hidden { display: none; }
+
+        /* Card with Slider */
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: var(--transition); }
+        .card:hover { transform: translateY(-10px); }
+        
+        .slider-box { position: relative; height: 230px; overflow: hidden; }
+        .slider-track { display: flex; transition: transform 0.5s ease-in-out; height: 100%; }
+        .slider-track img { width: 100%; height: 100%; object-fit: cover; flex-shrink: 0; }
+        
+        .slide-btn {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background: rgba(0,0,0,0.4); color: white; border: none;
+            width: 35px; height: 35px; cursor: pointer; border-radius: 50%;
+            font-size: 18px; z-index: 5;
+        }
+        .slide-btn:hover { background: var(--accent); }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        .badge { position: absolute; top: 15px; left: 15px; background: var(--primary); color: white; padding: 10px 12px; font-size: 14px; border-radius: 4px; z-index: 6; }
+        .card-body { padding: 20px; }
+        .card-body h3 { font-size: 17px; margin-bottom: 8px; color: #222; }
+        .loc { color: #888; font-size: 13px; margin-bottom: 15px; display: block; }
+        .price { font-size: 20px; font-weight: 700; color: var(--primary); }
+        .about-box { display: flex; gap: 50px; align-items: center; margin: 100px 0; flex-wrap: wrap; background-color: #e6e6e6;}
+        .about-img { flex: 1; min-width: 300px; border-radius: 15px; overflow: hidden; }
+        .about-img img { width: 100%; display: block; }
+        .about-text { flex: 1.2; min-width: 300px; }
+        .stats { display: flex; gap: 40px; margin-top: 30px; }
+        .stat-n { font-size: 24px; font-weight: 700; color: var(--gold); }
+        /* ՄԵՐ ՄԱՍԻՆ ԲԱԺԻՆ */
+.about-section {
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: #fff;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 10px;
+    position: relative;
+}
+ 
+.about-text h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin-top: 10px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin: 30px 0;
+}
+
+/* Վիճակագրության (Stats) դիզայնը */
+.about-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-item i {
+    font-size: 30px;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.stat-number {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+ 
+@media (max-width: 992px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 5%;
+    }
+    .about-text h2::after { margin: 10px auto; }
+    .about-stats { justify-content: center; flex-wrap: wrap; }
+}
+    
+        /* Footer */
+        /* FOOTER ԴԻԶԱՅՆ */
+footer {
+    background: var(--primary);
+    color: white;
+    padding: 40px 5%;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo h1 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.footer-logo p {
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: var(--accent);
+}
+
+.copyright {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.footer-right {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-right a {
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+ 
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+        /* Lightbox Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px; right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Մոդալ պատուհանի սլաքները */
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+.modal-nav:hover { background: var(--accent); }
+.modal-prev { left: 10px; }
+.modal-next { right: 10px; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 30px; }
+            .search-panel { flex-direction: column; margin-top: -30px; }
+            header nav { display: none; }
+        }
+.card:nth-child(n+4) {
+    display: none;
+}
+
+.is-searching .card {
+    display: block !important;
+}
+.load-more-container {
+    text-align: center;
+    margin: 50px 0;
+    width: 100%;
+}
+
+.btn-load-more {
+    background-color: transparent;
+    color: #0d1b2a; 
+    border: 2px solid #0d1b2a;
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-load-more:hover {
+    background-color: #0d1b2a;
+    color: #ffffff;
+    transform: translateY(-3px); 
+    box-shadow: 0 10px 20px rgba(13, 27, 42, 0.2);
+}
+
+.btn-load-more:active {
+    transform: translateY(-1px);
+}
+
+ 
+#loadMoreBtn {
+    display: inline-flex;
+}
+@media (max-width: 768px) {
+    .mobile-contact-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        z-index: 1000;
+        height: 60px;
+    }
+    .mobile-contact-bar a {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .call-btn { background-color: #0d1b2a; } 
+    .wa-btn { background-color: #25d366; } 
+}
+@media (min-width: 769px) { .mobile-contact-bar { display: none; } }
+@media (max-width: 600px) {
+    .card {
+        width: 100% !important;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 600px) {
+   
+    .search-panel {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr; 
+        gap: 12px; 
+        padding: 15px !important;
+    }
+
+    
+   
+    .input-group {
+        margin-bottom: 0 !important; 
+    }
+
+    
+    .btn-search {
+        grid-column: span 2; 
+        margin-top: 10px;
+        height: 45px; 
+        font-size: 14px !important;
+    }
+
+    
+    .input-group select, 
+    .input-group input {
+        padding: 8px 10px !important; 
+        font-size: 13px !important;   
+        height: 40px;                 
+    }
+
+  
+    .input-group label {
+        font-size: 11px !important;
+        margin-bottom: 4px;
+    }
+    
+
+}
+.card:active {
+    transform: scale(0.98);
+    transition: 0.1s;
+}
+
+.realty-footer {
+    background-color: #0d1b2a !important; 
+    color: #ffffff !important;
+    padding: 60px 0 100px 0 !important; 
+    font-family: Arial, sans-serif !important;
+}
+
+.realty-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 25px !important;
+}
+
+
+.realty-footer-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important; 
+    gap: 40px !important;
+    margin-bottom: 50px !important;
+}
+
+
+.realty-logo-area img {
+    max-width: 160px !important;
+    margin-bottom: 20px !important;
+}
+
+.realty-text {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #bdc3c7 !important;
+}
+
+
+.realty-title {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    margin-bottom: 20px !important;
+    position: relative !important;
+    padding-bottom: 10px !important;
+}
+
+.realty-title::after {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 45px !important;
+    height: 2px !important;
+    background-color: #B88F60 !important;
+}
+
+
+.realty-links, .realty-contacts {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.realty-links li, .realty-contacts li {
+    margin-bottom: 12px !important;
+    font-size: 14px !important;
+    color: #bdc3c7 !important;
+}
+
+.realty-links li a {
+    color: #bdc3c7 !important;
+    text-decoration: none !important;
+    transition: color 0.3s !important;
+}
+
+.realty-links li a:hover {
+    color: #ffffff !important;
+}
+
+
+.realty-footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding-top: 30px !important;
+    text-align: center !important;
+}
+
+.realty-social-icons {
+    margin-bottom: 20px !important;
+    color: #B88F60;
+}
+
+.realty-social-icons a {
+    color: #B88F60 !important;
+    font-size: 22px !important;
+    margin: 0 15px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+}
+
+
+
+.filter-form div:last-child {
+    grid-column: 1 / -1 !important;  
+    width: 100% !important;
+}
+@media (max-width: 768px) {
+    .realty-footer-grid {
+        grid-template-columns: 1fr !important; 
+        text-align: center !important;
+    }
+
+    .realty-title::after {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .realty-logo-area img {
+        margin: 0 auto 20px auto !important;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div  class="logo-section" >
+        
+        <img href="#" src="https://i.ibb.co/Jww8mWnq/gavar-realty-png-logo-3.png"  alt="Logo" class="logo-img">
+        <div href="#" class="logo-text">
+            <h1>GAVAR</h1>
+            <p style="margin-left: 8px;">  REALTY</p>
+        </div>
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Գլխավոր</a></li>
+            <li><a href="#propertyGrid">Վաճառք</a></li>
+        
+            <li><a href="#about">Մեր մասին</a></li>
+            <li><a href="#about">Կոնտակտներ</a></li>
+        </ul>
+    </nav>
+
+    <a href="tel:+37443466663" class="btn-contact-top">Կապ մեզ հետ</a>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>GAVAR REALTY</h2>
+        <p class="subtitle">Ձեր վստահելի անշարժ գույքի գործընկեր</p>
+
+        <div class="hero-features">
+            <div class="feature-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Վաճառք և<br>վարձակալություն</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Գավառ<br>և Երևան</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Անվտանգ<br>գործարքներ</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-handshake"></i>
+                <span>Պրոֆեսիոնալ<br>ծառայություններ</span>
+            </div>
+        </div>
+
+        <a href="#propertyGrid" class="btn-main">Տեսնել առաջարկները</a>
+    </div>
+ 
+</section>
+
+<div class="search-panel" id="properties">
+    <div class="input-group">
+        <label>Քաղաք</label>
+        <select id="filterCity">
+            <option value="all">Բոլորը</option>
+            <option value="գավառ">Գավառ</option>
+            <option value="երևան">Երևան</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <label>Տեսակ</label>
+        <select id="filterType">
+            <option value="all">Բոլորը</option>
+            <option value="բնակարան">Բնակարան</option>
+            <option value="տուն">Տուն</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <label>Սենյակներ</label>
+        <select id="filterRooms">
+            <option value="all">Բոլորը</option>
+            <option value="1">1 սենյակ</option>
+            <option value="2">2 սենյակ</option>
+            <option value="3">3+ սենյակ</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <label>Նվազագույն Գին ($)</label>
+        <input type="number" id="filterMinPrice" placeholder="0" style="width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 5px; background: #fafafa; outline: none;">
+    </div>
+    <div class="input-group">
+        <label>Առավելագույն Գին ($)</label>
+        <input type="number" id="filterMaxPrice" placeholder="Անսահմանափակ" style="width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 5px; background: #fafafa; outline: none;">
+    </div>
+    <button class="btn-search" onclick="runSearch()">ՈՐՈՆԵԼ</button>
+    
+</div>
+<div class="mobile-contact-bar">
+    <a href="tel:+37443466663" class="call-btn"><i class="fas fa-phone"></i> Զանգահարել</a>
+    <a href="https://wa.me/message/6FWGDC6V5S3GJ1" class="wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
+<div class="container">
+   
+    <div class="title-section">
+        <h2>Արդյունքներ</h2>
+        <div class="underline"></div>
+    </div>
+
+    <div id="propertyGrid" class="grid" >
+
+ <div class="card" data-city="գավառ" data-type="տուն" data-rooms="4">
+            <div class="slider-box">
+                <span class="badge" style="background-color: red; font-size: 18px;" >ՇՏԱՊ</span>
+                <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <div class="slider-track">
+
+                     <img src="images/sep1.jpeg"onclick="openLightbox(this)">
+                    <img src="images/sep2.jpeg"onclick="openLightbox(this)">
+                    <img src="images/sep3.jpeg"onclick="openLightbox(this)">
+                    <img src="images/sep4.jpeg"onclick="openLightbox(this)">
+                    <img src="images/sep5.jpeg"onclick="openLightbox(this)">
+                    <img src="images/sep6.jpeg"onclick="openLightbox(this)">
+                    <img src="images/sep7.jpeg"onclick="openLightbox(this)">
+                    <img src="images/sep8.jpeg"onclick="openLightbox(this)">
+                    <img src="images/sep9.jpeg"onclick="openLightbox(this)">
+                    <img src="images/sep10.jpeg"onclick="openLightbox(this)">
+                     <img src="images/sep11.jpeg"onclick="openLightbox(this)">
+                       <img src="images/sep12.jpeg"onclick="openLightbox(this)">
+                     
+                </div>
+                <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="card-body">
+                <h3> Տրվում է վարձով Առանձնատուն</h3>
+                <span class="loc">Գավառ,Գ.Նարեկացու Փողոց (Կենտրոն)</span>
+                <div class="price">70,000 ֏/ամիս</div>
+            </div>
+        </div>  
+        <div class="card" data-price="40000" data-city="գավառ" data-type="բնակարան" data-rooms="3">
+            <div class="slider-box">
+                <span class="badge"   >Վաճառվում է</span>
+                <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <div class="slider-track">
+                    <img src="images/man2.jpeg"onclick="openLightbox(this)">
+                    <img src="images/man1.jpeg"onclick="openLightbox(this)">
+                    <img src="images/man3.jpeg"onclick="openLightbox(this)">
+                    <img src="images/man4.jpeg"openLightbox(this)">
+                    <img src="images/man5.jpeg"openLightbox(this)">
+                    <img src="images/man6.jpeg"openLightbox(this)">
+                    <img src="images/man7.jpeg"openLightbox(this)">
+                    <img src="images/man8.jpeg"openLightbox(this)">
+                    <img src="images/man9.jpeg"openLightbox(this)">
+                    <img src="images/man10.jpeg"openLightbox(this)">
+                    <img src="images/man11.jpeg"openLightbox(this)">
+                    <img src="images/man12.jpeg"openLightbox(this)">
+                     
+                </div>
+                <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="card-body">
+                <h3>3 սենյականոց բնակարան, Ավտոտնակով</h3>
+                <span class="loc">Գավառ,Քաղաքապետարանի դիմաց</span>
+                <div class="price">40000$</div>
+            </div>
+        
+        </div>
+        <div class="card" data-price="36000" data-city="գավառ" data-type="բնակարան" data-rooms="3">
+            <div class="slider-box">
+                <span    class="badge">Վաճառվում է</span>
+                <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <div class="slider-track">
+                    <img src="images/cax1.jpeg"onclick="openLightbox(this)">
+                    <img src="images/cax2.jpeg"onclick="openLightbox(this)">
+                    <img src="images/cax3.jpeg"onclick="openLightbox(this)">
+                    <img src="images/cax4.jpeg"onclick="openLightbox(this)">
+                    <img src="images/cax5.jpeg"onclick="openLightbox(this)">
+                    <img src="images/cax6.jpeg"onclick="openLightbox(this)">
+                    <img src="images/cax7.jpeg"onclick="openLightbox(this)">
+                  <img src="images/cax8.jpeg"onclick="openLightbox(this)">
+               
+                </div>
+                <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="card-body">
+                <h3>4 Սենյականոց Բնակարան 96քմ</h3>
+                <span class="loc">Գավառ, Ա.Ոսկանան Փողոց</span>
+                <div class="price">36000$</div>
+            </div>
+        </div> 
+        <div class="card" data-price="17800" data-city="գավառ" data-type="բնակարան" data-rooms="2">
+            <div class="slider-box">
+                <span class="badge"  >Վաճառվում է</span>
+                <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <div class="slider-track">
+                    
+                    <img src="images/bl1.jpeg"onclick="openLightbox(this)">
+                    <img src="images/bl2.jpeg"onclick="openLightbox(this)">
+                    <img src="images/bl3.jpeg"onclick="openLightbox(this)">
+                    <img src="images/bl4.jpeg"onclick="openLightbox(this)">
+                    <img src="images/bl5.jpeg"onclick="openLightbox(this)">
+                    <img src="images/bl6.jpeg"onclick="openLightbox(this)">
+                    <img src="images/bl7.jpeg"onclick="openLightbox(this)">
+                    <img src="images/bl8.jpeg"onclick="openLightbox(this)">
+                    <img src="images/bl9.jpeg"onclick="openLightbox(this)">
+                    <img src="images/bl0.jpeg"onclick="openLightbox(this)">
+                </div>
+                <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="card-body">
+                <h3>2 սենյականոց բնակարան 68քմ</h3>
+                <span class="loc">Գավառ,Ազատության Փողոց</span>
+                <div class="price">17500$</div>
+            </div>
+        
+        </div>
+        
+        <div class="card" data-price="32000" data-city="գավառ" data-type="բնակարան" data-rooms="2">
+            <div class="slider-box">
+                <span class="badge"   >Վաճառվում է</span>
+                <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <div class="slider-track">
+                    <img src="images/ml2.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ml1.jpeg"onclick="openLightbox(this)">
+                 
+                    <img src="images/ml3.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ml4.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ml5.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ml6.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ml7.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ml8.jpeg"onclick="openLightbox(this)">
+                   
+                </div>
+                <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="card-body">
+                <h3>2 սենյականոց բնակարան 68քմ</h3>
+                <span class="loc">Գավառ,Ազատության Փողոց</span>
+                <div class="price">32000$</div>
+            </div>
+        
+        </div>
+       
+         
+        
+        
+    
+        <!-- <div class="card" data-price="14000" data-city="գավառ" data-type="բնակարան" data-rooms="1">
+            <div class="slider-box">
+                <span class="badge"  ">Վաճառվում է</span>
+                <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <div class="slider-track">
+                    <img src="images/G1.jpg"onclick="openLightbox(this)">
+                    <img src="images/G2.jpg"onclick="openLightbox(this)">
+                    <img src="images/G3.jpg"onclick="openLightbox(this)">
+                    <img src="images/G5.jpg"onclick="openLightbox(this)">
+                    <img src="images/G6.png"onclick="openLightbox(this)">
+                   
+                </div>
+                <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="card-body">
+                <h3>1 սենյականոց բնակարան 28քմ</h3>
+                <span class="loc">Գավառ,Ազատության Փողոց</span>
+                <div class="price">14000$</div>
+            </div>
+        
+        </div> -->
+        <div class="card" data-price="50000" data-city="գավառ" data-type="բնակարան" data-rooms="3">
+            <div class="slider-box">
+                <span class="badge" style="background:var(--primary)">Վաճառվում է</span>
+                <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <div class="slider-track">
+                    <img src="images/sv1.jpeg"onclick="openLightbox(this)">
+                    <img src="images/sv2.jpeg"onclick="openLightbox(this)">
+                    <img src="images/sv3.jpeg"onclick="openLightbox(this)">
+                    <img src="images/sv4.jpeg"onclick="openLightbox(this)">
+                    <img src="images/sv5.jpeg"onclick="openLightbox(this)">
+                </div>
+                <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="card-body">
+                <h3>3 Սենյականոց Բնակարան 68քմ</h3>
+                <span class="loc">Գավառ, Ա.Ոսկանան Փողոց</span>
+                <div class="price">55000$</div>
+            </div>
+        
+    </div>
+        <div class="card" data-price="130000" data-city="երևան" data-type="բնակարան" data-rooms="2">
+            <div class="slider-box">
+                <span class="badge">Վաճառվում է </span>
+                <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <div class="slider-track">
+                    <img src="images/er4.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ er1.jpeg"onclick="openLightbox(this)">
+                    <img src="images/er2.jpeg"onclick="openLightbox(this)">
+                    <img src="images/er3.jpeg"onclick="openLightbox(this)">
+              
+                    <img src="images/er5.jpeg"onclick="openLightbox(this)">
+                    <img src="images/er6.jpeg"onclick="openLightbox(this)">
+                    <img src="images/er7.jpeg"onclick="openLightbox(this)">
+                   
+
+                </div>
+                <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="card-body">
+                <h3>2 Սենյականոց Բնակարան 60քմ</h3>
+                <span class="loc"> Երևան , Արզումանյան 8/2</span>
+                <div class="price">130000$</div>
+            </div>
+        </div> 
+       
+        <div class="card" data-city="գավառ" data-type="բնակարան" data-rooms="3">
+            <div class="slider-box">
+                <span class="badge">Վաճառվում է</span>
+                <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <div class="slider-track">
+
+                    <img src="images/lv1.jpeg"onclick="openLightbox(this)">
+                    <img src="images/lv2.jpeg"onclick="openLightbox(this)">
+                    <img src="images/lv4.jpeg"onclick="openLightbox(this)">
+                    <img src="images/lv3.jpeg"onclick="openLightbox(this)">
+                    <img src="images/lv5.jpeg"onclick="openLightbox(this)">
+                    <img src="images/lv6.jpeg"onclick="openLightbox(this)">
+                    <img src="images/lv7.jpeg"onclick="openLightbox(this)">
+                    <img src="images/lv8.jpeg"onclick="openLightbox(this)">
+                    <img src="images/lv9.jpeg"onclick="openLightbox(this)">
+                    <img src="images/lv10.jpeg"onclick="openLightbox(this)">
+                </div>
+
+                <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="card-body">
+                <h3> 3 Սենյականոց Բնակարան 73քմ</h3>
+                <span class="loc"> Գավառ, Ա.Ոսկանան Փողոց</span>
+                <div class="price">62500$</div>
+            </div>
+        </div>
+        <!-- <div class="card" data-city="երևան" data-type="բնակարան" data-rooms="2">
+            <div class="slider-box">
+                <span class="badge" style="background:var(--accent)">Վաճառվում է</span>
+                <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <div class="slider-track">
+                    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600"onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600"onclick="openLightbox(this)">
+                </div>
+                <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="card-body">
+                <h3>2 սենյականոց բնակարան</h3>
+                <span class="loc">📍 Երևան, Արաբկիր</span>
+                <div class="price">350,000 ֏/ամիս</div>
+            </div>
+        </div>  VARDZAKALUTYUUUUUUUUUUUN-->
+      
+        
+        
+       
+       
+        
+        <div class="card" data-price="27000" data-city="գավառ" data-type="բնակարան" data-rooms="2">
+            <div class="slider-box">
+                <span class="badge">Վաճառվում է</span>
+                <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <div class="slider-track">
+                    <img src="images/lil1.jpeg"onclick="openLightbox(this)">
+                    <img src="images/lil2.jpeg"onclick="openLightbox(this)">
+                    <img src="images/lil3.jpeg"onclick="openLightbox(this)">
+                    <img src="images/lil4.jpeg"onclick="openLightbox(this)">
+                    <img src="images/lil5.jpeg"onclick="openLightbox(this)">
+                    <img src="images/lil6.jpeg"onclick="openLightbox(this)">
+                    <img src="images/lil7.jpeg"onclick="openLightbox(this)">
+                   
+                  
+                </div>
+                <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="card-body">
+                <h3>2 Սենյականոց Բնակարան 41քմ</h3>
+                <span class="loc">Գավառ, Ազատության Փողոց</span>
+                <div class="price">27000$</div>
+            </div>
+        </div> 
+        <div class="card" data-price="35000" data-city="գավառ" data-type="բնակարան" data-rooms="3">
+            <div class="slider-box">
+                <span class="badge">Վաճառվում է</span>
+                <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <div class="slider-track">
+                    
+                    <img src="images/ax1.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ax2.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ax3.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ax4.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ax5.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ax6.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ax7.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ax8.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ax9.jpeg"onclick="openLightbox(this)">
+                </div>
+                <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="card-body">
+                <h3>3 Սենյականոց Բնակարան 78քմ</h3>
+                <span class="loc">Գավառ, Ա.Ոսկանան Փողոց</span>
+                <div class="price" >35000$</div>
+            </div>
+        </div> 
+        <div class="card"  data-price="34000" data-city="գավառ" data-type="տուն" data-rooms="3">
+            <div class="slider-box">
+                <span class="badge" style="background:var(--primary)">Վաճառվում է</span>
+                <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <div class="slider-track">
+                    <img src="images/gar1.jpeg"onclick="openLightbox(this)">
+                    <img src="images/gar2.jpeg"onclick="openLightbox(this)">
+                    <img src="images/gar3.jpeg"onclick="openLightbox(this)">
+                    <img src="images/gar4.jpeg"onclick="openLightbox(this)">
+                    <img src="images/gar5.jpeg"onclick="openLightbox(this)">
+                    <img src="images/gar6.jpeg"onclick="openLightbox(this)">
+                    <img src="images/gar7.jpeg"onclick="openLightbox(this)">
+                    <img src="images/gar8.jpeg"onclick="openLightbox(this)">
+                    <img src="images/gar9.jpeg"onclick="openLightbox(this)">
+                    <img src="images/gar10.jpeg"onclick="openLightbox(this)">
+                    <img src="images/gar11.jpeg"onclick="openLightbox(this)">
+                </div>
+                <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="card-body">
+                <h3>Առանձնատուն 400քմ</h3>
+                <span class="loc">Գավառ, Ս.Շահումյանի Փողոց</span>
+                <div class="price">34000$</div>
+            </div>
+        
+        </div>
+        <div class="card" data-price="110000" data-city="գավառ" data-type="տուն" data-rooms="3">
+            <div class="slider-box">
+                <span class="badge" style="background:var(--primary)">Վաճառվում է</span>
+                <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <div class="slider-track">
+                    <img src="images/teli3.jpeg"onclick="openLightbox(this)">
+                    <img src="images/teli1.jpeg"onclick="openLightbox(this)">
+                    <img src="images/teli2.jpeg"onclick="openLightbox(this)">
+                    
+                    <img src="images/teli4.jpeg"onclick="openLightbox(this)">
+                    <img src="images/teli5.jpeg"onclick="openLightbox(this)">
+                    <img src="images/teli6.jpeg"onclick="openLightbox(this)">
+                    <img src="images/teli7.jpeg"onclick="openLightbox(this)">
+                    <img src="images/teli8.jpeg"onclick="openLightbox(this)">
+                    <img src="images/teli9.jpeg"onclick="openLightbox(this)">
+                </div>
+                <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="card-body">
+                <h3>Առանձնատուն 5 Սենյակ </h3>
+                <span class="loc">Գավառ, Սայադյան Փողոց</span>
+                <div class="price">110000$</div>
+            </div>
+        
+    </div>
+   
+    <div class="card" data-city="գավառ" data-type="տուն" data-rooms="3">
+        <div class="slider-box">
+            <span class="badge" style="background:var(--primary)">Վաճառվում է</span>
+            <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+            <div class="slider-track">
+                <img src="images/dod1jpeg.jpeg"onclick="openLightbox(this)">
+                <img src="images/ dod2.jpeg"onclick="openLightbox(this)">
+                <img src="images/ dod3.jpeg"onclick="openLightbox(this)">
+                <img src="images/ dod4.jpeg"onclick="openLightbox(this)">
+            </div>
+            <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+        </div>
+        <div class="card-body">
+            <h3>Առանձնատուն 800քմ</h3>
+            <span class="loc">Գավառ, Ե.Չարենցի Փողոց</span>
+            <div class="price">28000$</div>
+        </div>
+    
+</div>
+
+<div class="card"  data-price="35000" data-city="գավառ" data-type="տուն" data-rooms="3">
+    <div class="slider-box">
+        <span class="badge" style="background:var(--primary)">Վաճառվում է</span>
+        <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+        <div class="slider-track">
+            <img src="images/em1.jpeg"onclick="openLightbox(this)">
+            <img src="images/em2.jpeg"onclick="openLightbox(this)">
+            <img src="images/em3.jpeg"onclick="openLightbox(this)">
+            <img src="images/em4.jpeg"onclick="openLightbox(this)">
+            <img src="images/em5.jpeg"onclick="openLightbox(this)">
+            <!-- <img src="images/teli6.jpeg"onclick="openLightbox(this)">
+            <img src="images/teli7.jpeg"onclick="openLightbox(this)">
+            <img src="images/teli8.jpeg"onclick="openLightbox(this)">
+            <img src="images/teli9.jpeg"onclick="openLightbox(this)"> -->
+        </div>
+        <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+    </div>
+    <div class="card-body">
+        <h3>Առանձնատուն 191քմ</h3>
+        <span class="loc">Գավառ, Գ.Նարեկացու Փողոց</span>
+        <div class="price">35000$</div>
+    </div>
+
+</div>
+<div class="card"  data-price="35000" data-city="գավառ" data-type="տուն" data-rooms="3">
+    <div class="slider-box">
+        <span class="badge" style="background:var(--primary)">Վաճառվում է</span>
+        <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+        <div class="slider-track">
+            <img src="images/bt1.jpeg"onclick="openLightbox(this)">
+            <img src="images/bt2.jpeg"onclick="openLightbox(this)">
+            <img src="images/bt3.jpeg"onclick="openLightbox(this)">
+            <img src="images/bt4.jpeg"onclick="openLightbox(this)">
+            <img src="images/bt5.jpeg"onclick="openLightbox(this)">
+            <img src="images/bt6.jpeg"onclick="openLightbox(this)">
+            <img src="images/bt7.jpeg"onclick="openLightbox(this)">
+            <img src="images/bt8.jpeg"onclick="openLightbox(this)">
+            <img src="images/bt9.jpeg"onclick="openLightbox(this)">
+            <img src="images/bt10.jpeg"onclick="openLightbox(this)">
+            <img src="images/bt11.jpeg"onclick="openLightbox(this)">
+            <img src="images/bt12.jpeg"onclick="openLightbox(this)">
+            <img src="images/bt13.jpeg"onclick="openLightbox(this)">
+            <img src="images/bt14.jpeg"onclick="openLightbox(this)">
+            <img src="images/bt15.jpeg"onclick="openLightbox(this)">
+        </div>
+        <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+    </div>
+    <div class="card-body">
+        <h3>Առանձնատուն 2141քմ ընդ/մակերես </h3>
+        <span class="loc">Գավառ, Միքայելյան Փողոց</span>
+        <div class="price">75000$</div>
+    </div>
+
+</div>
+
+</div>
+<div class="load-more-container">
+    <button id="loadMoreBtn" class="btn-load-more" onclick="showAllCards()">
+        <span>Տեսնել ավելին</span>
+        <i class="fas fa-chevron-down"></i> <!-- Եթե FontAwesome ունես -->
+    </button>
+</div>
+<section class="about-section" id="about">
+<div class="about-image">
+    <!-- Այստեղ դիր քո ուղարկած սիրուն նկարի հասցեն -->
+    <img src="https://i.ibb.co/qMKK6mJC/office.jpg" alt="Office">
+</div>
+
+<div class="about-text">
+    <h2>Մեր մասին</h2>
+    <p>
+        Gavar Realty-ն ձեր վստահելի գործընկերն է անշարժ գույքի շուկայում։ Մենք օգնում ենք ճիշտ որոշում կայացնել՝ լինի գնելու, վաճառելու թե վարձակալելու դեպքում։ Մեր փորձը, շուկայի գիտելիքը և մոտեցումը թույլ են տալիս ձեզ ստանալ առավել շահավետ գործարք՝ առանց սթրեսի ու ավելորդ քաշքշուկի։
+        Մեզ մոտ գործում է <b>0</b> դրամ միջնորդավճար գնորդի համար: 
+    </p>
+    <!-- Նախավճար չկա – Դուք մեզ ոչինչ չեք վճարում -->
+    <div class="about-stats">
+        <div class="stat-item">
+            <i class="fa-solid fa-handshake"></i>
+            <div style="text-transform: uppercase;" class="stat-number">Ապահով գործարքներ</div>
+            <div class="stat-label"> Մենք հոգում ենք ամբողջ գործընթացը</div>
+        </div>
+        <div class="stat-item">
+            <i class="fa-solid fa-exclamation-triangle""></i>
+            <div style="text-transform: uppercase;" class="stat-number">Նախավճար չկա</div>
+            <div class="stat-label">Դուք մեզ ոչինչ չեք վճարում
+                </div>
+        </div>
+       
+        <div class="stat-item">
+            <i class="fa-solid fa-camera"></i>
+            <div style="text-transform: uppercase;" class="stat-number">Պրոֆեսիոնալ նկարահանում</div>
+            <div class="stat-label">Ձեր գույքը ներկայացվում է բարձր մակարդակով</div>
+        </div>
+    </div>
+</div>
+</section>
+
+<footer class="realty-footer">
+    <div class="realty-container">
+        <div class="realty-footer-grid">
+            <!-- 1. Լոգոյի մաս -->
+            <div class="realty-footer-col">
+                <div class="realty-logo-area">
+                    <img src="https://i.ibb.co/FbnHzbGS/gavar-realty-png-logo-1.png" alt="Gavar Realty">
+                </div>
+                <p class="realty-text">Քո վստահելի գործընկերը անշարժ գույքի ոլորտում Գավառում և ողջ Հայաստանում:</p>
+            </div>
+
+            <div class="realty-footer-col">
+                <h4 class="realty-title">Արագ հղումներ</h4>
+                <ul class="realty-links">
+                    <li><a href="#">Գլխավոր</a></li>
+                    <li><a href="#propertyGrid">Բնակարաններ</a></li>
+                    <li><a href="#propertyGrid">Տներ</a></li>
+                    <li><a href="#about">Մեր մասին</a></li>
+                </ul>
+            </div>
+
+            <div class="realty-footer-col">
+                <h4 class="realty-title">Կապ մեզ հետ</h4>
+                <ul class="realty-contacts">
+                    <li><i style="color: #B88F60;" class="fas fa-map-marker-alt"></i> ք. Գավառ, Կենտրոնական հրապարակ 4</li>
+                    <li><i style="color: #B88F60;" class="fas fa-phone"></i > +374 43 46 66 63</li>
+                    <li><i style="color: #B88F60;" class="fas fa-envelope"></i> info@gavarrealty@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="realty-footer-bottom">
+            <div class="realty-social-icons">
+                <a  href="https://www.facebook.com/profile.php?id=61579540321938"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/gavar.realty/"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/message/6FWGDC6V5S3GJ1"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <!-- <section class="callback-section">
+                <div class="callback-container">
+                    <h3>Ունե՞ք հարցեր</h3>
+                    <p>Թողեք ձեր տվյալները, և մեր մասնագետը կկապնվի ձեզ հետ :</p>
+                    
+                    <form name="callback-form" method="POST" data-netlify="true" class="callback-form">
+                        <div class="input-group">
+                            <input type="text" name="name" placeholder="Ձեր անունը" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" name="phone" placeholder="+374 (XX) XX-XX-XX" required>
+                        </div>
+                        <button type="submit" class="submit-btn">ՊԱՏՎԻՐԵԼ ԶԱՆԳ</button>
+                    </form>
+                </div>
+            </section> -->
+            <p style="margin-top: 20px" class="realty-copyright">© 2026 Gavar Realty. All Right Reserved.</p>
+        </div>
+    </div>
+</footer>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</footer>
+<div id="myModal" class="modal">
+    <span class="close-modal" onclick="closeLightbox()">&times;</span>
+    <button class="modal-nav modal-prev" onclick="changeLightboxImg(-1)">&#10094;</button>
+    <img class="modal-content" id="imgFull">
+    <button class="modal-nav modal-next" onclick="changeLightboxImg(1)">&#10095;</button>
+</div>
+</div>
+<script>
+    function moveSlide(btn, direction) {
+        const track = btn.parentElement.querySelector('.slider-track');
+        const slides = track.querySelectorAll('img');
+        const width = track.clientWidth;
+        
+        let currentPos = track.style.transform ? parseInt(track.style.transform.replace('translateX(', '').replace('px)', '')) : 0;
+        let index = Math.abs(currentPos / width);
+        
+        index += direction;
+        
+        if (index >= slides.length) index = 0;
+        if (index < 0) index = slides.length - 1;
+        
+        track.style.transform = `translateX(-${index * width}px)`;
+    }
+function openLightbox(element) {
+        const modal = document.getElementById("myModal");
+        const modalImg = document.getElementById("imgFull");
+        
+        // Գտնում ենք տվյալ քարտի բոլոր նկարները
+        const card = element.closest('.card');
+        const allImages = card.querySelectorAll('.slider-track img');
+        
+        currentLightboxImages = Array.from(allImages).map(img => img.src);
+        currentImgIndex = currentLightboxImages.indexOf(element.src);
+        
+        modal.style.display = "flex";
+        modalImg.src = currentLightboxImages[currentImgIndex];
+    }
+
+    function changeLightboxImg(direction) {
+        currentImgIndex += direction;
+        if (currentImgIndex >= currentLightboxImages.length) currentImgIndex = 0;
+        if (currentImgIndex < 0) currentImgIndex = currentLightboxImages.length - 1;
+        document.getElementById("imgFull").src = currentLightboxImages[currentImgIndex];
+    }
+
+    function closeLightbox() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    // Փակել պատուհանից դուրս սեղմելիս
+    window.onclick = function(event) {
+        const modal = document.getElementById("myModal");
+        if (event.target == modal) closeLightbox();
+    }
+
+    function runSearch() {
+    const city = document.getElementById('filterCity').value;
+    const type = document.getElementById('filterType').value;
+    const rooms = document.getElementById('filterRooms').value;
+    
+    const minPrice = parseFloat(document.getElementById('filterMinPrice').value) || 0;
+    const maxPrice = parseFloat(document.getElementById('filterMaxPrice').value) || Infinity;
+
+    const cards = document.querySelectorAll('.card');
+    let found = false;
+
+    cards.forEach(card => {
+        const cCity = card.getAttribute('data-city');
+        const cType = card.getAttribute('data-type');
+        const cRooms = card.getAttribute('data-rooms');
+        
+        // Ստանում ենք գինը տեքստից և վերածում թվի
+        const priceText = card.querySelector('.price').innerText.replace(/[^0-9]/g, '');
+        const cPrice = parseFloat(priceText);
+
+        const matchCity = (city === 'all' || cCity === city);
+        const matchType = (type === 'all' || cType === type);
+        const matchRooms = (rooms === 'all' || cRooms === rooms);
+        
+        // Գնի ստուգում
+        const matchPrice = (cPrice >= minPrice && cPrice <= maxPrice);
+
+        if (matchCity && matchType && matchRooms && matchPrice) {
+            card.classList.remove('hidden');
+            found = true;
+        } else {
+            card.classList.add('hidden');
+        }
+    });
+
+    if (!found) {
+        alert("Ցավոք, նման գնային միջակայքում հայտարարություն չգտնվեց:");
+    }
+    let currentLightboxImages = []; 
+let currentImgIndex = 0; 
+
+function openLightbox(element) {
+    const modal = document.getElementById("myModal");
+    const modalImg = document.getElementById("imgFull");
+    
+    const card = element.closest('.card');
+    const allImages = card.querySelectorAll('.slider-track img');
+    
+    currentLightboxImages = Array.from(allImages).map(img => img.src);
+    
+    currentImgIndex = currentLightboxImages.indexOf(element.src);
+    
+    modal.style.display = "flex";
+    modalImg.src = currentLightboxImages[currentImgIndex];
+}
+
+function changeLightboxImg(direction) {
+    currentImgIndex += direction;
+    
+    if (currentImgIndex >= currentLightboxImages.length) currentImgIndex = 0;
+    if (currentImgIndex < 0) currentImgIndex = currentLightboxImages.length - 1;
+    
+    document.getElementById("imgFull").src = currentLightboxImages[currentImgIndex];
+}
+
+function closeLightbox() {
+    document.getElementById("myModal").style.display = "none";
+}
+}
+let isSearchActive = false;
+
+function showAllCards() {
+    const grid = document.querySelector('.grid');  
+    grid.classList.add('is-searching');
+    document.getElementById('loadMoreBtn').style.display = 'none';
+}
+
+function runSearch() {
+    isSearchActive = true;
+    const city = document.getElementById('filterCity').value;
+    const type = document.getElementById('filterType').value;
+    const rooms = document.getElementById('filterRooms').value;
+    const minPrice = document.getElementById('filterMinPrice').value;
+    const maxPrice = document.getElementById('filterMaxPrice').value;
+    
+    const cards = document.querySelectorAll('.card');
+    const grid = document.querySelector('.grid');  
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+
+    grid.classList.add('is-searching');
+    loadMoreBtn.style.display = 'none';
+
+    cards.forEach(card => {
+        const cardCity = card.getAttribute('data-city'); 
+        const cardType = card.getAttribute('data-type');
+        const cardRooms = card.getAttribute('data-rooms');
+        const cardPrice = parseInt(card.getAttribute('data-price'));
+
+        // Ֆիլտրման տրամաբանությունը
+        const matchCity = (city === 'all' || city === cardCity);
+        const matchType = (type === 'all' || type === cardType);
+        const matchRooms = (rooms === 'all' || rooms === cardRooms);
+        const matchMinPrice = (!minPrice || cardPrice >= minPrice);
+        const matchMaxPrice = (!maxPrice || cardPrice <= maxPrice);
+
+        if (matchCity && matchType && matchRooms && matchMinPrice && matchMaxPrice) {
+            card.style.setProperty('display', 'block', 'important');
+        } else {
+            card.style.setProperty('display', 'none', 'important');
+    
+document.getElementById('propertyGrid').scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+
+   
+    if (city === 'all' && type === 'all' && rooms === 'all' && !minPrice && !maxPrice) {
+        grid.classList.remove('is-searching');
+        loadMoreBtn.style.display = 'block';
+        isSearchActive = false;
+    }
+}
+function filterProperties() {
+ 
+    const minPrice = parseFloat(document.getElementById('min-price').value) || 0;
+    const maxPrice = parseFloat(document.getElementById('max-price').value) || Infinity;
+
+ 
+    const properties = document.querySelectorAll('.property-card');  
+
+    properties.forEach(card => {
+      
+        const propertyPrice = parseFloat(card.getAttribute('data-price'));
+
+        
+        const matchesMin = propertyPrice >= minPrice;
+        const matchesMax = propertyPrice <= maxPrice;
+
+ 
+        if (matchesMin && matchesMax) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+</script>
+
+</body>
+</html>
