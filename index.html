@@ -262,7 +262,7 @@ body {
         /* Catalog Grid */
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px 80px; }
         .title-section { text-align: center; margin-bottom: 40px; }
-        .underline { width: 50px; height: 3px; background: var(--accent); margin: 10px auto; }
+        .underline { width: 950px; height: 3px; background: var(--accent); margin: 10px auto; }
         
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .hidden { display: none; }
@@ -718,7 +718,20 @@ footer {
     display: inline-block !important;
 }
 
+.realty-section-wrapper {
+    margin-bottom: 80px !important;  
+}
 
+.realty-section-wrapper .title-section {
+    margin-bottom: 30px !important;
+    text-align: center;
+}
+
+ 
+.load-more-container {
+    text-align: center;
+    margin-top: 30px;
+}
 
 .filter-form div:last-child {
     grid-column: 1 / -1 !important;  
@@ -739,7 +752,28 @@ footer {
         margin: 0 auto 20px auto !important;
     }
 }
+ 
+ 
 
+ 
+@media screen and (max-width: 1024px) {
+    .commercial-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+ 
+.commercial-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+}
+  
+@media screen and (max-width: 768px) {
+    #propertyGridCommercial {
+        grid-template-columns: 1fr !important;
+    }
+}
     </style>
 </head>
 <body>
@@ -757,7 +791,7 @@ footer {
     <nav>
         <ul>
             <li><a href="#">Գլխավոր</a></li>
-            <li><a href="#propertyGrid">Վաճառք</a></li>
+            <li><a href="#propertyGridApartments">Վաճառք</a></li>
         
             <li><a href="#about">Մեր մասին</a></li>
             <li><a href="#about">Կոնտակտներ</a></li>
@@ -810,7 +844,8 @@ footer {
         <select id="filterType">
             <option value="all">Բոլորը</option>
             <option value="բնակարան">Բնակարան</option>
-            <option value="տուն">Տուն</option>
+            <option value="տուն">Առանձնատուն</option>
+            <option value="commercial">Հողատարածք / Կոմերցիոն</option>
         </select>
     </div>
     <div class="input-group">
@@ -839,13 +874,16 @@ footer {
 </div>
 <div class="container">
    
-    <div class="title-section">
-        <h2>Արդյունքներ</h2>
-        <div class="underline"></div>
-    </div>
+  
 
-    <div id="propertyGrid" class="grid" >
-
+    <div class="realty-section-wrapper" id="section-apartments">
+        <div class="title-section">
+            <h2>Բնակարաններ</h2>
+            <div class="underline"></div>
+        </div>
+    
+        <div id="propertyGridApartments" class="grid">
+             
  <!-- <div class="card" data-city="գավառ" data-type="տուն" data-rooms="4">
             <div class="slider-box">
                 <span class="badge" style="background-color: red; font-size: 18px;" >ՇՏԱՊ</span>
@@ -1174,139 +1212,243 @@ footer {
                 <div class="price" >35000$</div>
             </div>
         </div> 
-        <div class="card"  data-price="34000" data-city="գավառ" data-type="տուն" data-rooms="3">
+
+            </div> 
+    
+        <div class="load-more-container">
+            <button class="btn-load-more" onclick="showAllApartments()">
+                <span>Տեսնել ավելին</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+    </div>
+    <div class="realty-section-wrapper" id="section-houses">
+        <div class="title-section">
+            <h2>Առանձնատներ</h2>
+            <div class="underline"></div>
+        </div>
+    
+        <div id="propertyGridHouses" class="grid">
+            <div class="card"  data-price="32000" data-city="գավառ" data-type="տուն" data-rooms="3">
+                <div class="slider-box">
+                    <span class="badge" style="background:var(--primary)">Վաճառվում է</span>
+                    <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                    <div class="slider-track">
+                        <img src="images/gar1.jpeg"onclick="openLightbox(this)">
+                        <img src="images/gar2.jpeg"onclick="openLightbox(this)">
+                        <img src="images/gar3.jpeg"onclick="openLightbox(this)">
+                        <img src="images/gar4.jpeg"onclick="openLightbox(this)">
+                        <img src="images/gar5.jpeg"onclick="openLightbox(this)">
+                        <img src="images/gar6.jpeg"onclick="openLightbox(this)">
+                        <img src="images/gar7.jpeg"onclick="openLightbox(this)">
+                        <img src="images/gar8.jpeg"onclick="openLightbox(this)">
+                        <img src="images/gar9.jpeg"onclick="openLightbox(this)">
+                        <img src="images/gar10.jpeg"onclick="openLightbox(this)">
+                        <img src="images/gar11.jpeg"onclick="openLightbox(this)">
+                    </div>
+                    <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+                </div>
+                <div class="card-body">
+                    <h3>Առանձնատուն 400քմ</h3>
+                    <span class="loc">Գավառ, Ս.Շահումյանի Փողոց</span>
+                    <div class="price">32000$</div>
+                </div>
+            
+            </div>
+            <div class="card" data-price="110000" data-city="գավառ" data-type="տուն" data-rooms="3">
+                <div class="slider-box">
+                    <span class="badge" style="background:var(--primary)">Վաճառվում է</span>
+                    <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                    <div class="slider-track">
+                        <img src="images/teli3.jpeg"onclick="openLightbox(this)">
+                        <img src="images/teli1.jpeg"onclick="openLightbox(this)">
+                        <img src="images/teli2.jpeg"onclick="openLightbox(this)">
+                        
+                        <img src="images/teli4.jpeg"onclick="openLightbox(this)">
+                        <img src="images/teli5.jpeg"onclick="openLightbox(this)">
+                        <img src="images/teli6.jpeg"onclick="openLightbox(this)">
+                        <img src="images/teli7.jpeg"onclick="openLightbox(this)">
+                        <img src="images/teli8.jpeg"onclick="openLightbox(this)">
+                        <img src="images/teli9.jpeg"onclick="openLightbox(this)">
+                    </div>
+                    <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+                </div>
+                <div class="card-body">
+                    <h3>Առանձնատուն 5 Սենյակ </h3>
+                    <span class="loc">Գավառ, Սայադյան Փողոց</span>
+                    <div class="price">110000$</div>
+                </div>
+            
+        </div>
+        <div class="card"  data-price="20000" data-city="գավառ" data-type="տուն" data-rooms="3">
             <div class="slider-box">
                 <span class="badge" style="background:var(--primary)">Վաճառվում է</span>
                 <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
                 <div class="slider-track">
-                    <img src="images/gar1.jpeg"onclick="openLightbox(this)">
-                    <img src="images/gar2.jpeg"onclick="openLightbox(this)">
-                    <img src="images/gar3.jpeg"onclick="openLightbox(this)">
-                    <img src="images/gar4.jpeg"onclick="openLightbox(this)">
-                    <img src="images/gar5.jpeg"onclick="openLightbox(this)">
-                    <img src="images/gar6.jpeg"onclick="openLightbox(this)">
-                    <img src="images/gar7.jpeg"onclick="openLightbox(this)">
-                    <img src="images/gar8.jpeg"onclick="openLightbox(this)">
-                    <img src="images/gar9.jpeg"onclick="openLightbox(this)">
-                    <img src="images/gar10.jpeg"onclick="openLightbox(this)">
-                    <img src="images/gar11.jpeg"onclick="openLightbox(this)">
+                    <img src="images/dux1.jpeg"onclick="openLightbox(this)">
+                    <img src="images/dux2.jpeg"onclick="openLightbox(this)">
+                    <!-- <img src="images/dux3.jpeg"onclick="openLightbox(this)"> -->
+                    <!-- <img src="images/dux4.jpeg"onclick="openLightbox(this)">
+                    <img src="images/dux5.jpeg"onclick="openLightbox(this)"> -->
+                   
                 </div>
                 <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
             </div>
             <div class="card-body">
-                <h3>Առանձնատուն 400քմ</h3>
-                <span class="loc">Գավառ, Ս.Շահումյանի Փողոց</span>
-                <div class="price">34000$</div>
+                <h3>Առանձնատուն 350քմ </h3>
+                <span class="loc">Գավառ, Արծրունի եղբայրների Փողոց</span>
+                <div class="price">20000$</div>
             </div>
         
         </div>
-        <div class="card" data-price="110000" data-city="գավառ" data-type="տուն" data-rooms="3">
+        <div class="card" data-city="գավառ" data-type="տուն" data-rooms="3">
             <div class="slider-box">
                 <span class="badge" style="background:var(--primary)">Վաճառվում է</span>
                 <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
                 <div class="slider-track">
-                    <img src="images/teli3.jpeg"onclick="openLightbox(this)">
-                    <img src="images/teli1.jpeg"onclick="openLightbox(this)">
-                    <img src="images/teli2.jpeg"onclick="openLightbox(this)">
-                    
-                    <img src="images/teli4.jpeg"onclick="openLightbox(this)">
-                    <img src="images/teli5.jpeg"onclick="openLightbox(this)">
-                    <img src="images/teli6.jpeg"onclick="openLightbox(this)">
-                    <img src="images/teli7.jpeg"onclick="openLightbox(this)">
-                    <img src="images/teli8.jpeg"onclick="openLightbox(this)">
-                    <img src="images/teli9.jpeg"onclick="openLightbox(this)">
+                    <img src="images/dod1jpeg.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ dod2.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ dod3.jpeg"onclick="openLightbox(this)">
+                    <img src="images/ dod4.jpeg"onclick="openLightbox(this)">
                 </div>
                 <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
             </div>
             <div class="card-body">
-                <h3>Առանձնատուն 5 Սենյակ </h3>
-                <span class="loc">Գավառ, Սայադյան Փողոց</span>
-                <div class="price">110000$</div>
+                <h3>Առանձնատուն 800քմ</h3>
+                <span class="loc">Գավառ, Ե.Չարենցի Փողոց</span>
+                <div class="price">28000$</div>
             </div>
         
     </div>
-   
-    <div class="card" data-city="գավառ" data-type="տուն" data-rooms="3">
+    
+    <div class="card"  data-price="35000" data-city="գավառ" data-type="տուն" data-rooms="3">
         <div class="slider-box">
             <span class="badge" style="background:var(--primary)">Վաճառվում է</span>
             <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
             <div class="slider-track">
-                <img src="images/dod1jpeg.jpeg"onclick="openLightbox(this)">
-                <img src="images/ dod2.jpeg"onclick="openLightbox(this)">
-                <img src="images/ dod3.jpeg"onclick="openLightbox(this)">
-                <img src="images/ dod4.jpeg"onclick="openLightbox(this)">
+                <img src="images/em1.jpeg"onclick="openLightbox(this)">
+                <img src="images/em2.jpeg"onclick="openLightbox(this)">
+                <img src="images/em3.jpeg"onclick="openLightbox(this)">
+                <img src="images/em4.jpeg"onclick="openLightbox(this)">
+                <img src="images/em5.jpeg"onclick="openLightbox(this)">
+                <!-- <img src="images/teli6.jpeg"onclick="openLightbox(this)">
+                <img src="images/teli7.jpeg"onclick="openLightbox(this)">
+                <img src="images/teli8.jpeg"onclick="openLightbox(this)">
+                <img src="images/teli9.jpeg"onclick="openLightbox(this)"> -->
             </div>
             <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
         </div>
         <div class="card-body">
-            <h3>Առանձնատուն 800քմ</h3>
-            <span class="loc">Գավառ, Ե.Չարենցի Փողոց</span>
-            <div class="price">28000$</div>
+            <h3>Առանձնատուն 191քմ</h3>
+            <span class="loc">Գավառ, Գ.Նարեկացու Փողոց</span>
+            <div class="price">35000$</div>
         </div>
     
-</div>
-
-<div class="card"  data-price="35000" data-city="գավառ" data-type="տուն" data-rooms="3">
-    <div class="slider-box">
-        <span class="badge" style="background:var(--primary)">Վաճառվում է</span>
-        <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
-        <div class="slider-track">
-            <img src="images/em1.jpeg"onclick="openLightbox(this)">
-            <img src="images/em2.jpeg"onclick="openLightbox(this)">
-            <img src="images/em3.jpeg"onclick="openLightbox(this)">
-            <img src="images/em4.jpeg"onclick="openLightbox(this)">
-            <img src="images/em5.jpeg"onclick="openLightbox(this)">
-            <!-- <img src="images/teli6.jpeg"onclick="openLightbox(this)">
-            <img src="images/teli7.jpeg"onclick="openLightbox(this)">
-            <img src="images/teli8.jpeg"onclick="openLightbox(this)">
-            <img src="images/teli9.jpeg"onclick="openLightbox(this)"> -->
+    </div>
+    <div class="card"  data-price="35000" data-city="գավառ" data-type="տուն" data-rooms="3">
+        <div class="slider-box">
+            <span class="badge" style="background:var(--primary)">Վաճառվում է</span>
+            <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+            <div class="slider-track">
+                <img src="images/bt1.jpeg"onclick="openLightbox(this)">
+                <img src="images/bt2.jpeg"onclick="openLightbox(this)">
+                <img src="images/bt3.jpeg"onclick="openLightbox(this)">
+                <img src="images/bt4.jpeg"onclick="openLightbox(this)">
+                <img src="images/bt5.jpeg"onclick="openLightbox(this)">
+                <img src="images/bt6.jpeg"onclick="openLightbox(this)">
+                <img src="images/bt7.jpeg"onclick="openLightbox(this)">
+                <img src="images/bt8.jpeg"onclick="openLightbox(this)">
+                <img src="images/bt9.jpeg"onclick="openLightbox(this)">
+                <img src="images/bt10.jpeg"onclick="openLightbox(this)">
+                <img src="images/bt11.jpeg"onclick="openLightbox(this)">
+                <img src="images/bt12.jpeg"onclick="openLightbox(this)">
+                <img src="images/bt13.jpeg"onclick="openLightbox(this)">
+                <img src="images/bt14.jpeg"onclick="openLightbox(this)">
+                <img src="images/bt15.jpeg"onclick="openLightbox(this)">
+            </div>
+            <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
         </div>
-        <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
-    </div>
-    <div class="card-body">
-        <h3>Առանձնատուն 191քմ</h3>
-        <span class="loc">Գավառ, Գ.Նարեկացու Փողոց</span>
-        <div class="price">35000$</div>
-    </div>
-
-</div>
-<div class="card"  data-price="35000" data-city="գավառ" data-type="տուն" data-rooms="3">
-    <div class="slider-box">
-        <span class="badge" style="background:var(--primary)">Վաճառվում է</span>
-        <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
-        <div class="slider-track">
-            <img src="images/bt1.jpeg"onclick="openLightbox(this)">
-            <img src="images/bt2.jpeg"onclick="openLightbox(this)">
-            <img src="images/bt3.jpeg"onclick="openLightbox(this)">
-            <img src="images/bt4.jpeg"onclick="openLightbox(this)">
-            <img src="images/bt5.jpeg"onclick="openLightbox(this)">
-            <img src="images/bt6.jpeg"onclick="openLightbox(this)">
-            <img src="images/bt7.jpeg"onclick="openLightbox(this)">
-            <img src="images/bt8.jpeg"onclick="openLightbox(this)">
-            <img src="images/bt9.jpeg"onclick="openLightbox(this)">
-            <img src="images/bt10.jpeg"onclick="openLightbox(this)">
-            <img src="images/bt11.jpeg"onclick="openLightbox(this)">
-            <img src="images/bt12.jpeg"onclick="openLightbox(this)">
-            <img src="images/bt13.jpeg"onclick="openLightbox(this)">
-            <img src="images/bt14.jpeg"onclick="openLightbox(this)">
-            <img src="images/bt15.jpeg"onclick="openLightbox(this)">
+        <div class="card-body">
+            <h3>Առանձնատուն 2141քմ ընդ/մակերես </h3>
+            <span class="loc">Գավառ, Միքայելյան Փողոց</span>
+            <div class="price">75000$</div>
         </div>
-        <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+    
     </div>
-    <div class="card-body">
-        <h3>Առանձնատուն 2141քմ ընդ/մակերես </h3>
-        <span class="loc">Գավառ, Միքայելյան Փողոց</span>
-        <div class="price">75000$</div>
+ 
+            </div>
+    
+        <div class="load-more-container">
+            <button class="btn-load-more" onclick="showAllHouses()">
+                <span>Տեսնել ավելին</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
     </div>
-
+        
+    <div class="realty-section-wrapper" id="section-commercial">
+        <div class="title-section">
+            <h2>Հողատարածքներ և Կոմերցիոն</h2>
+            <div class="underline"></div>
+        </div>
+        <div id="propertyGridCommercial" class="commercial-grid">
+            <div class="card"  data-price="18000" data-city="գավառ" data-type="commercial">
+                <div class="slider-box">
+                    <span class="badge" style="background:var(--primary)">Վաճառվում է</span>
+                    <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                    <div class="slider-track">
+                              <img src="images/gex2.jpeg"onclick="openLightbox(this)">
+                        <img src="images/gex1.jpeg"onclick="openLightbox(this)">
+                  
+                        <img src="images/gex3.jpeg"onclick="openLightbox(this)">
+                        <img src="images/gex5.jpeg"onclick="openLightbox(this)">
+                        <img src="images/gex6.jpeg"onclick="openLightbox(this)">
+                       
+                    </div>
+                    <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+                </div>
+                <div class="card-body">
+                    <h3>Հողատարածք 650քմ Առաջին Գիծ </h3>
+                    <span class="loc">Գավառ, Սայադյան 95, Ոստիկանության կողքը</span>
+                    <div class="price">18000$</div>
+                </div>
+            
+            </div>
+            <div class="card"  data-price="14500" data-city="գավառ" data-type="commercial">
+                <div class="slider-box">
+                    <span class="badge" style="background:var(--primary)">Վաճառվում է</span>
+                    <button class="slide-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                    <div class="slider-track">
+                        <img src="images/gexam3.jpeg"onclick="openLightbox(this)">
+                        <img src="images/gexam1.jpeg"onclick="openLightbox(this)">
+                        <img src="images/gexam2.jpeg"onclick="openLightbox(this)">
+                        
+  
+                       
+                    </div>
+                    <button class="slide-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+                </div>
+                <div class="card-body">
+                    <h3>Հողատարածք 114քմ  3_րդ Մաս </h3>
+                    <span class="loc">Գավառ, Ազատության 12  </span>
+                    <div class="price">14500$</div>
+                </div>
+            
+            </div>
+            
+            </div>
+      
+            
+           
+        <!-- <div class="load-more-container">
+            <button class="btn-load-more" onclick="showAllCommercial()">
+                <span>Տեսնել ավելին</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div> -->
+    </div>
 </div>
-
-</div>
-<div class="load-more-container">
-    <button id="loadMoreBtn" class="btn-load-more" onclick="showAllCards()">
-        <span>Տեսնել ավելին</span>
-        <i class="fas fa-chevron-down"></i> <!-- Եթե FontAwesome ունես -->
-    </button>
+ 
 </div>
 <section class="about-section" id="about">
 <div class="about-image">
@@ -1358,8 +1500,8 @@ footer {
                 <h4 class="realty-title">Արագ հղումներ</h4>
                 <ul class="realty-links">
                     <li><a href="#">Գլխավոր</a></li>
-                    <li><a href="#propertyGrid">Բնակարաններ</a></li>
-                    <li><a href="#propertyGrid">Տներ</a></li>
+                    <li><a href="#propertyGridApartments">Բնակարաններ</a></li>
+                    <li><a href="#propertyGridHouses">Տներ</a></li>
                     <li><a href="#about">Մեր մասին</a></li>
                 </ul>
             </div>
@@ -1457,151 +1599,114 @@ function openLightbox(element) {
         if (event.target == modal) closeLightbox();
     }
 
-    function runSearch() {
-    const city = document.getElementById('filterCity').value;
-    const type = document.getElementById('filterType').value;
-    const rooms = document.getElementById('filterRooms').value;
-    
-    const minPrice = parseFloat(document.getElementById('filterMinPrice').value) || 0;
-    const maxPrice = parseFloat(document.getElementById('filterMaxPrice').value) || Infinity;
-
-    const cards = document.querySelectorAll('.card');
-    let found = false;
-
-    cards.forEach(card => {
-        const cCity = card.getAttribute('data-city');
-        const cType = card.getAttribute('data-type');
-        const cRooms = card.getAttribute('data-rooms');
-        
-        // Ստանում ենք գինը տեքստից և վերածում թվի
-        const priceText = card.querySelector('.price').innerText.replace(/[^0-9]/g, '');
-        const cPrice = parseFloat(priceText);
-
-        const matchCity = (city === 'all' || cCity === city);
-        const matchType = (type === 'all' || cType === type);
-        const matchRooms = (rooms === 'all' || cRooms === rooms);
-        
-        // Գնի ստուգում
-        const matchPrice = (cPrice >= minPrice && cPrice <= maxPrice);
-
-        if (matchCity && matchType && matchRooms && matchPrice) {
-            card.classList.remove('hidden');
-            found = true;
-        } else {
-            card.classList.add('hidden');
-        }
-    });
-
-    if (!found) {
-        alert("Ցավոք, նման գնային միջակայքում հայտարարություն չգտնվեց:");
-    }
-    let currentLightboxImages = []; 
-let currentImgIndex = 0; 
-
-function openLightbox(element) {
-    const modal = document.getElementById("myModal");
-    const modalImg = document.getElementById("imgFull");
-    
-    const card = element.closest('.card');
-    const allImages = card.querySelectorAll('.slider-track img');
-    
-    currentLightboxImages = Array.from(allImages).map(img => img.src);
-    
-    currentImgIndex = currentLightboxImages.indexOf(element.src);
-    
-    modal.style.display = "flex";
-    modalImg.src = currentLightboxImages[currentImgIndex];
+ // 1. «ՏԵՍՆԵԼ ԱՎԵԼԻՆ» ԿՈՃԱԿՆԵՐԻ ՖՈՒՆԿՑԻԱՆԵՐԸ
+ 
+function showAllApartments() {
+    const cards = document.querySelectorAll('#propertyGridApartments .card');
+    cards.forEach(card => card.style.setProperty('display', 'block', 'important'));
+    document.querySelector('#section-apartments .btn-load-more').style.display = 'none';
 }
 
-function changeLightboxImg(direction) {
-    currentImgIndex += direction;
-    
-    if (currentImgIndex >= currentLightboxImages.length) currentImgIndex = 0;
-    if (currentImgIndex < 0) currentImgIndex = currentLightboxImages.length - 1;
-    
-    document.getElementById("imgFull").src = currentLightboxImages[currentImgIndex];
+function showAllHouses() {
+    const cards = document.querySelectorAll('#propertyGridHouses .card');
+    cards.forEach(card => card.style.setProperty('display', 'block', 'important'));
+    document.querySelector('#section-houses .btn-load-more').style.display = 'none';
 }
 
-function closeLightbox() {
-    document.getElementById("myModal").style.display = "none";
+function showAllCommercial() {
+    const cards = document.querySelectorAll('#propertyGridCommercial .card');
+    cards.forEach(card => card.style.setProperty('display', 'block', 'important'));
+    document.querySelector('#section-commercial .btn-load-more').style.display = 'none';
 }
-}
-let isSearchActive = false;
 
-function showAllCards() {
-    const grid = document.querySelector('.grid');  
-    grid.classList.add('is-searching');
-    document.getElementById('loadMoreBtn').style.display = 'none';
-}
+ // 2. ՈՐՈՆՄԱՆ ՀԻՄՆԱԿԱՆ ՖՈՒՆԿՑԻԱՆ (RUN SEARCH)
+ 
 
 function runSearch() {
-    isSearchActive = true;
+     
     const city = document.getElementById('filterCity').value;
     const type = document.getElementById('filterType').value;
     const rooms = document.getElementById('filterRooms').value;
-    const minPrice = document.getElementById('filterMinPrice').value;
-    const maxPrice = document.getElementById('filterMaxPrice').value;
+    const minPrice = parseFloat(document.getElementById('filterMinPrice').value) || 0;
+    const maxPrice = parseFloat(document.getElementById('filterMaxPrice').value) || Infinity;
     
+    // Գտնում ենք բոլոր տների քարտերը
     const cards = document.querySelectorAll('.card');
-    const grid = document.querySelector('.grid');  
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
-
-    grid.classList.add('is-searching');
-    loadMoreBtn.style.display = 'none';
 
     cards.forEach(card => {
         const cardCity = card.getAttribute('data-city'); 
         const cardType = card.getAttribute('data-type');
         const cardRooms = card.getAttribute('data-rooms');
-        const cardPrice = parseInt(card.getAttribute('data-price'));
+        const cardPrice = parseFloat(card.getAttribute('data-price')) || 0;
 
-        // Ֆիլտրման տրամաբանությունը
+        // Ֆիլտրման ճիշտ տրամաբանությունը
         const matchCity = (city === 'all' || city === cardCity);
         const matchType = (type === 'all' || type === cardType);
         const matchRooms = (rooms === 'all' || rooms === cardRooms);
-        const matchMinPrice = (!minPrice || cardPrice >= minPrice);
-        const matchMaxPrice = (!maxPrice || cardPrice <= maxPrice);
+        const matchMinPrice = cardPrice >= minPrice;
+        const matchMaxPrice = cardPrice <= maxPrice;
 
+        // Եթե համապատասխանում է՝ ցույց տալ, եթե ոչ՝ թաքցնել
         if (matchCity && matchType && matchRooms && matchMinPrice && matchMaxPrice) {
             card.style.setProperty('display', 'block', 'important');
         } else {
             card.style.setProperty('display', 'none', 'important');
-    
-document.getElementById('propertyGrid').scrollIntoView({ behavior: 'smooth' });
         }
     });
 
-   
-    if (city === 'all' && type === 'all' && rooms === 'all' && !minPrice && !maxPrice) {
-        grid.classList.remove('is-searching');
-        loadMoreBtn.style.display = 'block';
-        isSearchActive = false;
+    // 3. ԽԵԼԱՑԻ ԲԱԺԱՆՈՒՄ ԸՍՏ ՏԵՍԱԿԻ
+    // Եթե կլիենտը ընտրել է կոնկրետ տեսակ, մնացած դիվերը միանգամից լրիվ վերանում են
+    if (type === 'apartment') {
+        document.getElementById('section-apartments').style.display = 'block';
+        document.getElementById('section-houses').style.display = 'none';
+        document.getElementById('section-commercial').style.display = 'none';
+    }else if (type === 'commercial') {
+    document.getElementById('section-apartments').style.display = 'none';
+    document.getElementById('section-houses').style.display = 'none';
+    document.getElementById('section-commercial').style.display = 'block';
+} else if (type === 'house') {
+        document.getElementById('section-apartments').style.display = 'none';
+        document.getElementById('section-houses').style.display = 'block';
+        document.getElementById('section-commercial').style.display = 'none';
+    } else if (type === 'commercial') {
+        document.getElementById('section-apartments').style.display = 'none';
+        document.getElementById('section-houses').style.display = 'none';
+        document.getElementById('section-commercial').style.display = 'block';
+    } else {
+        // Եթե ընտրված է «Բոլորը» (all), ցույց տալ միայն այն բաժինները, որտեղ տուն է գտնվել
+        checkSectionVisibility('propertyGridApartments', 'section-apartments');
+        checkSectionVisibility('propertyGridHouses', 'section-houses');
+        checkSectionVisibility('propertyGridCommercial', 'section-commercial');
+    }
+
+    // Սահուն տանել էջը դեպի բնակարանների բաժինը, որ արդյունքը միանգամից երևա
+    const targetSection = document.getElementById('section-apartments');
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
     }
 }
-function filterProperties() {
- 
-    const minPrice = parseFloat(document.getElementById('min-price').value) || 0;
-    const maxPrice = parseFloat(document.getElementById('max-price').value) || Infinity;
 
  
-    const properties = document.querySelectorAll('.property-card');  
-
-    properties.forEach(card => {
-      
-        const propertyPrice = parseFloat(card.getAttribute('data-price'));
-
-        
-        const matchesMin = propertyPrice >= minPrice;
-        const matchesMax = propertyPrice <= maxPrice;
-
+// 3. ՕԳՆՈՂ ՖՈՒՆԿՑԻԱ՝ ԴԱՏԱՐԿ ԲԱԺԻՆՆԵՐԸ ԹԱՔՑՆԵԼՈՒ ՀԱՄԱՐ
  
-        if (matchesMin && matchesMax) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-    });
+
+function checkSectionVisibility(gridId, sectionId) {
+    const grid = document.getElementById(gridId);
+    const section = document.getElementById(sectionId);
+    if (!grid || !section) return;
+
+    // Հաշվում ենք, թե քանի քարտ կա, որոնց display-ը 'none' չէ
+    const visibleCards = Array.from(grid.querySelectorAll('.card')).filter(card => card.style.display !== 'none');
+
+    // Եթե այս բաժնում ոչ մի տուն չի գտնվել, ամբողջ վերնագրով դիվը թաքցնում ենք
+    if (visibleCards.length === 0) {
+        section.style.display = 'none';
+    } else {
+        section.style.display = 'block';
+    }
 }
+    
+ 
 
 </script>
 
