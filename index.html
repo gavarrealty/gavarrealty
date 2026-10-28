@@ -544,7 +544,51 @@ footer {
     transform: translateY(-1px);
 }
 
- 
+ /* Google Translate-ի տարրի ընդհանուր ոճը */
+#google_translate_element {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+/* Ընտրացանկի (Dropdown) տեսքը */
+.goog-te-combo {
+  background-color: #1a1a1a !important; /* Մուգ ֆոն քո սայթի ոճով */
+  color: #ffffff !important;           /* Սպիտակ տեքստ */
+  border: 1px solid #333333 !important; /* Նուրբ եզրագիծ */
+  padding: 8px 16px !important;
+  border-radius: 8px !important;       /* Կլորացված անկյուններ */
+  font-family: inherit !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  outline: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Մկնիկը վրան պահելիս */
+.goog-te-combo:hover {
+  border-color: #ffffff !important;
+  background-color: #252525 !important;
+}
+
+/* Թաքցնում ենք Google-ի լոգոն և տգեղ վերևի պանելը */
+.goog-te-gadget {
+  color: transparent !important;
+  font-size: 0 !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+  margin: 0 !important;
+}
+
+.goog-te-banner-frame.skiptranslate, 
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
 #loadMoreBtn {
     display: inline-flex;
 }
