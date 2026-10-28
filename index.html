@@ -544,51 +544,7 @@ footer {
     transform: translateY(-1px);
 }
 
- /* Google Translate-ի տարրի ընդհանուր ոճը */
-#google_translate_element {
-  display: inline-block;
-  margin: 10px 0;
-}
-
-/* Ընտրացանկի (Dropdown) տեսքը */
-.goog-te-combo {
-  background-color: #1a1a1a !important; /* Մուգ ֆոն քո սայթի ոճով */
-  color: #ffffff !important;           /* Սպիտակ տեքստ */
-  border: 1px solid #333333 !important; /* Նուրբ եզրագիծ */
-  padding: 8px 16px !important;
-  border-radius: 8px !important;       /* Կլորացված անկյուններ */
-  font-family: inherit !important;
-  font-size: 14px !important;
-  cursor: pointer !important;
-  outline: none !important;
-  transition: all 0.3s ease !important;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-/* Մկնիկը վրան պահելիս */
-.goog-te-combo:hover {
-  border-color: #ffffff !important;
-  background-color: #252525 !important;
-}
-
-/* Թաքցնում ենք Google-ի լոգոն և տգեղ վերևի պանելը */
-.goog-te-gadget {
-  color: transparent !important;
-  font-size: 0 !important;
-}
-
-.goog-te-gadget .goog-te-combo {
-  margin: 0 !important;
-}
-
-.goog-te-banner-frame.skiptranslate, 
-.goog-te-banner-frame {
-  display: none !important;
-}
-
-body {
-  top: 0px !important;
-}
+ 
 #loadMoreBtn {
     display: inline-flex;
 }
@@ -818,37 +774,70 @@ body {
         grid-template-columns: 1fr !important;
     }
 }
+<style>
+  .lang-selector {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-family: sans-serif;
+  }
+  .lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #f1f3f5;
+    border: 1px solid #dee2e6;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #333;
+  }
+  .lang-btn:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+    transform: translateY(-1px);
+  }
+  .lang-btn img {
+    width: 20px;
+    height: 15px;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+  /* Թաքցնում ենք Google-ի բնօրինակ տգեղ պանելը */
+  .goog-te-banner-frame, .skiptranslate {
+    display: none !important;
+  }
+  body {
+    top: 0 !important;
+  }
+</style>
     </style>
 </head>
- 
-<div id="google_translate_element"></div>
 
- 
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'hy',
-    includedLanguages: 'ru,en',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  }, 'google_translate_element');
-}
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <body>
- 
-<div id="google_translate_element"></div>
- 
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'hy',
-    includedLanguages: 'ru,en',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  }, 'google_translate_element');
-}
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 <header>
+    <div class="lang-selector">
+        <!-- Հայերեն -->
+        <a href="#" class="lang-btn" onclick="changeLanguage('hy'); return false;">
+          <img src="https://flagcdn.com/w40/am.png" alt="Armenian"> Հայ
+        </a>
+        <!-- Ռուսերեն -->
+        <a href="#" class="lang-btn" onclick="changeLanguage('ru'); return false;">
+          <img src="https://flagcdn.com/w40/ru.png" alt="Russian"> Рус
+        </a>
+        <!-- Անգլերեն -->
+        <a href="#" class="lang-btn" onclick="changeLanguage('en'); return false;">
+          <img src="https://flagcdn.com/w40/gb.png" alt="English"> Eng
+        </a>
+      </div>
+      
+       
+      <div id="google_translate_element" style="display:none;"></div>
     <div  class="logo-section" >
         
         <img href="#" src="https://i.ibb.co/Jww8mWnq/gavar-realty-png-logo-3.png"  alt="Logo" class="logo-img">
@@ -2087,6 +2076,35 @@ function checkSectionVisibility(gridId, sectionId) {
  
 
 </script>
-
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'hy',
+        includedLanguages: 'hy,ru,en',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  
+    // Ֆունկցիա, որը սեղմելիս փոխում է լեզուն Google Translate-ի կուկիների միջոցով
+    function changeLanguage(lang) {
+      var selectField = document.querySelector(".goog-te-combo");
+      if (selectField) {
+        selectField.value = lang;
+        selectField.dispatchEvent(new Event('change'));
+      } else {
+        // Եթե վիդջեթը մի փոքր ուշ է բեռնվում, կրկնում ենք մի քանի միլիվայրկյան անց
+        setTimeout(function() {
+          var selectField = document.querySelector(".goog-te-combo");
+          if (selectField) {
+            selectField.value = lang;
+            selectField.dispatchEvent(new Event('change'));
+          }
+        }, 500);
+      }
+    }
+  </script>
+  
+  <!-- Google Translate-ի պաշտոնական սկրիպտը -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
